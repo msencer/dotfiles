@@ -13,9 +13,9 @@ Installation
 
 - Get Vundle for plugins ```git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim```
 
-- Install plugins ```vim +PluginInstall +qall```
-
 - Create a symbolic link to .vimrc ```ln -s ~/.vim/vimrc ~/.vimrc```
+
+- Install plugins ```vim +PluginInstall +qall```
 
 Now you are supposed to be done!
 
