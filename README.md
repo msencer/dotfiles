@@ -17,6 +17,10 @@ Installation
 
 - Install plugins ```vim +PluginInstall +qall```
 
+YouCompleteMe - Auto-complete
+-------------
+[YouCompleteMe](https://github.com/Valloric/YouCompleteMe) also has an installation process. Please check it's documentation and follow the instructions.
+
 Now you are supposed to be done!
 
 Cheers!
