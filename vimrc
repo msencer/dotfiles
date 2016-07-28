@@ -95,13 +95,15 @@ EOF
 let python_highlight_all=1
 syntax on
 
-
-if has('gui_running')
-	set background=dark
-	colorscheme solarized
-else
-	colorscheme zenburn
-endif
+try
+	if has('gui_running')
+		set background=dark
+		colorscheme solarized
+	else
+		colorscheme zenburn
+	endif
+catch
+endtry
 
 " To toggle colorscheme to dark/light
 call togglebg#map("<F5>")
