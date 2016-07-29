@@ -52,11 +52,15 @@ Plugin 'jistr/vim-nerdtree-tabs'
 "git integration
 Plugin 'tpope/vim-fugitive'
 
+"git line changes
+Plugin 'airblade/vim-gitgutter'
+
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 Plugin 'christoomey/vim-tmux-navigator'
 
-" Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
+" for whitespace hygiene
+Plugin 'bronson/vim-trailing-whitespace'
 
 
 " All of your Plugins must be added before the following line
