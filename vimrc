@@ -111,4 +111,6 @@ endtry
 
 " To toggle colorscheme to dark/light
 call togglebg#map("<F5>")
+" python execution with F9
+nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
 
