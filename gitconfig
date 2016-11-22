@@ -2,9 +2,6 @@
   name  = msencer
   email = msencerkaradayi@gmail.com
 
-[credential]
-  helper = GIT_CREDENTIAL_HELPER
-
 [alias]
   a    = add
   all  = add -A
