@@ -3,6 +3,8 @@ set nu
 set splitbelow
 set splitright
 
+"visual bell instead of ringing
+set vb
 "split navigations without mouse
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
@@ -109,9 +111,25 @@ try
 	endif
 catch
 endtry
+augroup PERL
+"autoindent
+ autocmd FileType perl set autoindent|set smartindent
 
+" 4 space tabs
+ autocmd FileType perl set tabstop=4|set shiftwidth=4|set expandtab|set softtabstop=4
+
+ " show matching brackets
+ autocmd FileType perl set showmatch
+
+ " show line numbers
+ autocmd FileType perl set number
+
+ " check perl code with :make
+ autocmd FileType perl set makeprg=perl\ -c\ %\ $*
+ autocmd FileType perl set errorformat=%f:%l:%m
+ autocmd FileType perl set autowrite
+ autocmd FileType perl nnoremap <buffer> <C-R> :exec '!perl' shellescape(@%, 1)<cr>
+augroup END
 " To toggle colorscheme to dark/light
 call togglebg#map("<F5>")
 " perl execution with Ctrl + R
-nnoremap <buffer> <C-R> :exec '!perl' shellescape(@%, 1)<cr>
-
