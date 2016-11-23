@@ -133,3 +133,9 @@ augroup END
 " To toggle colorscheme to dark/light
 call togglebg#map("<F5>")
 " perl execution with Ctrl + R
+
+set pastetoggle=<C-P>
+
+" enable tab and s-tab in vmode
+vmap <tab> >gv
+vmap <s-tab> <gv
