@@ -62,6 +62,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 " for whitespace hygiene
 Plugin 'bronson/vim-trailing-whitespace'
 
+Plugin 'vim-perl/vim-perl'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -111,6 +112,6 @@ endtry
 
 " To toggle colorscheme to dark/light
 call togglebg#map("<F5>")
-" python execution with F9
-nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
+" perl execution with Ctrl + R
+nnoremap <buffer> <C-R> :exec '!perl' shellescape(@%, 1)<cr>
 
