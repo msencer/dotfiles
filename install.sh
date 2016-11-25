@@ -52,6 +52,10 @@ echo "Symlinking gitconfig"
 if [ -f ~/.gitconfig ];then rm ~/.gitconfig;fi
 ln -s $current_dir/gitconfig ~/.gitconfig
 
+echo "Symlinking tmux.conf"
+if [ -f ~/.tmux.conf ];then rm ~/.tmux.conf;fi
+ln -s $current_dir/tmux.conf ~/.tmux.conf
+
 echo "Installing VIM plugins ..."
 vim +PluginInstall +qall
 
