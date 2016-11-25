@@ -141,7 +141,12 @@ vmap <tab> >gv
 vmap <s-tab> <gv
 
 " syntastic perl config
+let env = $DEVMACH
+
+if env == "MSK"
 let g:syntastic_enable_perl_checker = 1
+endif
+
 let g:syntastic_perl_checkers = ['perl']
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
