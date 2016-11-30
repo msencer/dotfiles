@@ -29,6 +29,8 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
+Plugin 'kien/ctrlp.vim'
+
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'tmhedberg/SimpylFold'
@@ -132,11 +134,11 @@ augroup PERL
  autocmd FileType perl set autowrite
  autocmd FileType perl nnoremap <buffer> <C-R> :exec '!perl' shellescape(@%, 1)<cr>
 augroup END
-" To toggle colorscheme to dark/light
-call togglebg#map("<F5>")
-" perl execution with Ctrl + R
 
-set pastetoggle=<C-P>
+" CtrlP configuration
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
 
 " enable tab and s-tab in vmode
 vmap <tab> >gv
