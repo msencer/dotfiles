@@ -35,7 +35,7 @@ Plugin 'tmhedberg/SimpylFold'
 
 Plugin 'vim-scripts/indentpython.vim'
 
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'Valloric/YouCompleteMe'
 
 " for syntax checking
 Plugin 'scrooloose/syntastic'
@@ -71,7 +71,7 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 
-" NERDTree properties 
+" NERDTree properties
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 autocmd vimenter * NERDTree
 
@@ -79,8 +79,8 @@ autocmd vimenter * NERDTree
 let g:SimpylFold_docstring_preview=1
 
 " YouCompleteMe properties
-let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" let g:ycm_autoclose_preview_window_after_completion=1
+" map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " Frontend file indentation
 au BufNewFile,BufRead *.js, *.html, *.css
@@ -115,8 +115,10 @@ augroup PERL
 "autoindent
  autocmd FileType perl set autoindent|set smartindent
 
-" 4 space tabs
- autocmd FileType perl set tabstop=4|set shiftwidth=4|set expandtab|set softtabstop=4
+ autocmd filetype perl setlocal autoindent
+ autocmd filetype perl setlocal expandtab
+ autocmd filetype perl setlocal shiftwidth=4
+ autocmd filetype perl setlocal tabstop=4
 
  " show matching brackets
  autocmd FileType perl set showmatch
