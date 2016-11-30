@@ -149,6 +149,8 @@ let env = $DEVMACH
 
 if env == "MSK"
 let g:syntastic_enable_perl_checker = 1
+else
+let g:syntastic_enable_perl_checker = 0
 endif
 
 let g:syntastic_perl_checkers = ['perl']
