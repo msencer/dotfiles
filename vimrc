@@ -2,6 +2,7 @@ set encoding=utf-8
 set nu
 set splitbelow
 set splitright
+set clipboard=unnamed
 
 "visual bell instead of ringing
 set vb
@@ -29,6 +30,8 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
+Plugin 'leafgarland/typescript-vim'
+
 Plugin 'kien/ctrlp.vim'
 
 Plugin 'gmarik/Vundle.vim'
@@ -49,6 +52,7 @@ Plugin 'nvie/vim-flake8'
 Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
 
+Plugin 'tpope/vim-surround'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
