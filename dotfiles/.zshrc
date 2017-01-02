@@ -8,7 +8,7 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 
 export ANDROID_HOME=/usr/local/opt/android-sdk
 
-ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
 
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 

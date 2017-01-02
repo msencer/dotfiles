@@ -8,11 +8,7 @@ Installation
 
 - Make the installer script executable ```chmod +x ~/.dotfiles/bin/install.sh```
 
-- Run the installer script for handling the rest! If you want to see the messages from the script you may use -v property!
-
-```~/.dotfiles/bin/install.sh```
-OR
-```~/.dotfiles/bin/install.sh -v```
+- Run the installer script for handling the rest! Use -v for verbose```~/.dotfiles/bin/install.sh```
 
 YouCompleteMe - Auto-complete
 -------------

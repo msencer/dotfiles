@@ -48,12 +48,13 @@ else
 	vecho "ZSH found!"
 fi
 
-vecho "Checking honukai theme ..."
-if [ ! -f $ohmyzsh/themes/honukai.zsh-theme ]; then
-	vecho "Nope, installing honukai theme"
-	wget -P ~/.oh-my-zsh/themes "https://raw.githubusercontent.com/oskarkrawczyk/honukai-iterm/master/honukai.zsh-theme"
+vecho "Checking agnoster theme ..."
+vecho $ohmyzsh/themes/agnoster.zsh-theme 
+if [ ! -f $ohmyzsh/themes/agnoster.zsh-theme ]; then
+	vecho "Nope, installing agnoster theme"
+	wget -P ~/.oh-my-zsh/themes "https://gist.githubusercontent.com/agnoster/3712874/raw/agnoster.zsh-theme"
     else
-	vecho "You already have honukai theme, awesome!"
+	vecho "You already have agnoster theme, awesome!"
 fi
 
 current_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
