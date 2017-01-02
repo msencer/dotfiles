@@ -4,6 +4,8 @@ set splitbelow
 set splitright
 set clipboard=unnamed
 
+let mapleader=","
+
 "visual bell instead of ringing
 set vb
 "split navigations without mouse
@@ -53,6 +55,8 @@ Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
 
 Plugin 'tpope/vim-surround'
+
+Plugin 'scrooloose/nerdcommenter'
 
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
@@ -143,19 +147,6 @@ augroup END
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
-
-" enable tab and s-tab in vmode
-vmap <tab> >gv
-vmap <s-tab> <gv
-
-" syntastic perl config
-let env = $DEVMACH
-
-if env == "MSK"
-let g:syntastic_enable_perl_checker = 1
-else
-let g:syntastic_enable_perl_checker = 0
-endif
 
 let g:syntastic_perl_checkers = ['perl']
 set statusline+=%#warningmsg#

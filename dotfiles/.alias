@@ -1,0 +1,5 @@
+
+alias vi="mvim -v"
+alias off="ssh off -t tmux new-session -A -s main"
+alias app="ssh app -t tmux new-session -A -s main"
+alias emkcron="ssh emkcron -t tmux new-session -A -s main"
