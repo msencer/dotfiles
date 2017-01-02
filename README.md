@@ -1,21 +1,18 @@
-MSK's VIM Configuration
+MSK's dotfiles
 ===================
-
-
-Hey! This is my ~/.vim directory! 
-
-Welcome in!
 
 Installation
 -------------
 
-- Cloning the repo ```git clone https://github.com/msencer/vim-files ~/.vim```
+- Cloning the repo ```git clone https://github.com/msencer/dotfiles ~/.dotfiles```
 
-- Get Vundle for plugins ```git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim```
+- Make the installer script executable ```chmod +x ~/.dotfiles/bin/install.sh```
 
-- Create a symbolic link to .vimrc ```ln -s ~/.vim/vimrc ~/.vimrc```
+- Run the installer script for handling the rest! If you want to see the messages from the script you may use -v property!
 
-- Install plugins ```vim +PluginInstall +qall```
+```~/.dotfiles/bin/install.sh```
+OR
+```~/.dotfiles/bin/install.sh -v```
 
 YouCompleteMe - Auto-complete
 -------------
