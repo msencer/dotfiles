@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-#!/usr/bin/env bash
 
 # link all files from the dotfiles repo in $HOME, iff non existant, or
 # non-changed
@@ -49,7 +48,7 @@ else
 fi
 
 vecho "Checking agnoster theme ..."
-vecho $ohmyzsh/themes/agnoster.zsh-theme 
+vecho $ohmyzsh/themes/agnoster.zsh-theme
 if [ ! -f $ohmyzsh/themes/agnoster.zsh-theme ]; then
 	vecho "Nope, installing agnoster theme"
 	wget -P ~/.oh-my-zsh/themes "https://gist.githubusercontent.com/agnoster/3712874/raw/agnoster.zsh-theme"
