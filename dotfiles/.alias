@@ -15,13 +15,3 @@ alias _='sudo'
 alias mysqly='mysqly --fancy'
 
 alias vi="mvim -v"
-
-alias off="ssh off -t tmux new-session -A -s main"
-alias app="ssh app -t tmux new-session -A -s main"
-alias emkcron="ssh emkcron -t tmux new-session -A -s main"
-alias emkc-stag="ssh emkc-staging -t tmux new-session -A -s main"
-alias joinapp="ssh joinapp -t tmux new-session -A -s main"
-alias hotelintra="ssh hotelintra -t tmux new-session -A -s main"
-alias cron-stag="ssh cron-staging.prod.booking.com -t tmux new-session -A -s main"
-alias secapp="ssh secapp -t tmux new-session -A -s main"
-alias secapp-stag="ssh secapp-stag -t tmux new-session -A -s main"
