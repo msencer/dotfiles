@@ -1,6 +1,16 @@
-alias :q='exit'
-alias :e='vim'
+# Inspired from https://github.com/donnemartin/dev-setup/
 
+# Shortcuts
+alias :q='exit'
+alias :e='vi'
+alias msk='cd ~/MSK'
+alias book='cd ~/Booking'
+alias dl='cd ~/Downloads'
+alias g='git'
+alias j='jobs'
+alias h='history'
+
+# Easy navigation
 alias ..='cd ..'
 alias ..2='cd ../..'
 alias ..3='cd ../../..'
@@ -10,8 +20,39 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
-alias \\\\='cd $OLDPWD'
-alias _='sudo'
-alias mysqly='mysqly --fancy'
 
+# Replacg vi
 alias vi="mvim -v"
+
+# Stopwatch
+alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
+
+# Get updates for macOS; brew; npm; ruby
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade --all; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update'
+
+# IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en0"
+alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+
+# HTTP operations
+alias sniff="sudo ngrep -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
+alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
+
+# Recursively delete .DS_Store files
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+# Merge PDF files
+# # Usage: `mergepdf -o output.pdf input{1,2,3}.pdf`
+alias mergepdf='/System/Library/Automator/Combine\ PDF\ Pages.action/Contents/Resources/join.py'
+
+# One of @janmoesen’s ProTip™s
+for method in GET HEAD POST PUT DELETE TRACE OPTIONS; do
+    alias "$method"="lwp-request -m '$method'"
+done
+
+# Lock the screen
+alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+
+# Reload the shell
+alias reload="exec $SHELL -l"
