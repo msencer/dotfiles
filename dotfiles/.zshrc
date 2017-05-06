@@ -1,11 +1,11 @@
-# oh-my-zsh BEGIN
 export ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="agnoster"
-plugins=(git battery vi-mode)
+ZSH_THEME="powerlevel9k/powerlevel9k"
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time vi_mode)
+plugins=(zsh-autosuggestions git battery vi-mode)
 source $ZSH/oh-my-zsh.sh
 COMPLETION_WAITING_DOTS="true"
 HIST_STAMPS="dd/mm/yyyy"
-# oh-my-zsh END
 
 if [ -f /Users/mkaradayi/.tnsrc ]; then
     source /Users/mkaradayi/.tnsrc
@@ -53,7 +53,7 @@ function mkdircd  {
 	mkdir -p "$@" && eval cd "\"\$$#\""
 }
 function tssh {
-    ssh "$@" -t tmux new-session -A -s main
+    eval ssh "$@" -t tmux new-session -A -s main
 }
 function countlines() {
 	count=0
